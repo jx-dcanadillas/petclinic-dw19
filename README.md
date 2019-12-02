@@ -2,7 +2,7 @@
 
 We are taking the base of my [previous example project](https://github.com/WorkshopCB/spring-petclinic) using Docker container to build Docker (DoD). But in this repo we are going to replace the Docker build phase to use [Kaniko](https://github.com/GoogleContainerTools/kaniko#kaniko---build-images-in-kubernetes), a safest way to build Docker containers in Kubernetes.
 
-The pipeline to execute in CloudBees Core (Jenkins also) is:
+The pipeline to execute in CloudBees Core is:
 - Maven stage with a Maven container
 - Docker build and Docker push stages using Kaniko
 - Deploy stage into K8s using a container with kubectl tool
